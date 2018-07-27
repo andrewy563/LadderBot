@@ -1,0 +1,22 @@
+{
+  "name": "ladderbot",
+  "version": "1.0.0",
+  "description": "Basic ladder bot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ladder"
+  ],
+  "author": "andrewy563",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
