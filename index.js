@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const { token } = require('./config.json');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -15,11 +15,11 @@ for (const file of commandFiles) {
 const cooldowns = new Discord.Collection();
 
 client.on('message', message => {
-  if (!message.content.startsWith(prefix) || message.author.bot) {
+  if (!message.content.startsWith('!') || message.author.bot) {
     return;
   }
 
-  const args = message.content.slice(prefix.length).split(/ +/);
+  const args = message.content.slice('!'.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
   const command = client.commands.get(commandName) ||
@@ -36,7 +36,7 @@ client.on('message', message => {
     let reply = `You didn't provide any arguments, ${message.author}!`;
 
     if (command.usage) {
-      reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+      reply += `\nThe proper usage would be: \`!${command.name} ${command.usage}\``;
     }
 
     message.channel.send(reply);
