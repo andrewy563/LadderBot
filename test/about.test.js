@@ -1,4 +1,4 @@
-const about = require('../commands/about.js');
+const about = require('../src/commands/about.js');
 
 test('!about outputs Andrew Yoon', () => {
   expect(about.test()).toMatch(/Andrew Yoon/);
