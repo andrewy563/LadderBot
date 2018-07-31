@@ -10,7 +10,5 @@ module.exports = {
   execute (message) {
     message.channel.send(about());
   },
-  test () {
-    return about();
-  }
+  about
 };
