@@ -12,9 +12,10 @@ function ranking () {
 
   var output = [];
   var sortRanks = sortByValue(ranks);
-
+  var rank = 1;
   for (const player in sortRanks) {
-    output.push(`${sortRanks[player][1]}: ${sortRanks[player][0]}`);
+    output.push(`${rank}: ${sortRanks[player][1]} (${sortRanks[player][0]})`);
+    rank = rank + 1;
   }
   return output;
 }

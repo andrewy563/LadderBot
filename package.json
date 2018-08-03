@@ -4,7 +4,7 @@
   "description": "Basic ladder bot for discord",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint --ignore.path .gitignore .",
+    "lint": "eslint --ignore.path .",
     "test": "jest"
   },
   "keywords": [
