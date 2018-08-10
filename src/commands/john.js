@@ -1,5 +1,9 @@
+var filename = 'data/ucla/john.json';
+var ranks = require(`../../${filename}`);
+
 function john () {
-  return 'The sun was in my eyes.';
+  var index = Math.floor(Math.random() * ranks.john.length);
+  return ranks.john[index];
 }
 
 module.exports = {

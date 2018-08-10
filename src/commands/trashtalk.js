@@ -1,5 +1,9 @@
+var filename = 'data/ucla/trashtalk.json';
+var trashtalkJSON = require(`../../${filename}`);
+
 function trashtalk () {
-  return `https://www.youtube.com/watch?v=KhsOW-_TwfU`;
+  var index = Math.floor(Math.random() * trashtalkJSON.trash.length);
+  return trashtalkJSON.trash[index];
 }
 
 module.exports = {
